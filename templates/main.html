@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Word Counter
+{% endblock title %}
+{% block content %}
+
+<form action="upload/" method="POST" class="dropzone dz" id="MyDropZone">
+    {% csrf_token%}
+    <div class="fallback">
+        <input name="file" type="file" multiple />
+    </div>
+</form>
+
+<p class="mt-5" id="Total_Number"></p>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <h5 id="table_title"></h5>
+            <table class="table table-bordered WordsTable text-center" style="visibility: hidden;"></table>
+
+        </div>
+
+         <div class="col">
+            <div id="bar-chart-container">
+                <canvas id="WordChart"></canvas>
+            </div>
+
+             <div id="pie-chart-container">
+                <canvas id="PieChart"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+{% endblock content%}
