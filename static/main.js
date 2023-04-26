@@ -126,3 +126,4 @@ const myDropzone = new Dropzone("#MyDropZone",{
         })//end of
     }//end of init
 })
+

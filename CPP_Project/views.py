@@ -16,6 +16,8 @@ class LoginView(TemplateView):
 class HomeView(TemplateView):
     template_name = 'home.html'
 
+class AboutView(TemplateView):
+    template_name = 'about.html'
 
 def upload_document(request):
     if request.method == "POST":

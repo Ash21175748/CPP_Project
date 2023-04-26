@@ -5,12 +5,13 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', views.HomeView.as_view(), name='home'),
     path('main/', views.MainView.as_view(), name='main-view'),
     path('main/upload/', views.upload_document, name='upload-document'),
     path('signup/', views.SignView.as_view(), name='signup'),
     path('login/', views.LoginView.as_view(), name='login'),
-    path('', views.HomeView.as_view(), name='home'),
+    path('about/', views.AboutView.as_view(), name='about-view'),
+
 ]
 
 if settings.DEBUG:
